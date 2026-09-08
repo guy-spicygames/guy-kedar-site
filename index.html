@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>גיא קידר · Product Manager | AI × Product × Execution</title>
+  <meta name="description" content="גיא קידר, מנהל מוצר. מתכנן מוצר, מתרגם אותו לביצוע, מודד עם נתונים, מזהה failure modes ומשפר ב-iteration. Case studies: monday.com ו-ECA Agent (AI)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Grain / noise overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo">GK<span class="logo-dot">.</span></a>
+      <nav class="nav" id="nav">
+        <a href="#monday">monday.com</a>
+        <a href="#ai">AI Agent</a>
+        <a href="#work">Projects</a>
+        <a href="#about">About</a>
+        <a href="#resume" class="nav-cta">Resume</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-name">גיא קידר · Guy Kedar</p>
+        <p class="hero-eyebrow">Product Manager</p>
+        <h1 class="hero-title">AI × Product<br />× Execution</h1>
+        <p class="hero-sub">
+          אני לא רק "מתעניין ב-AI ומכיר את monday". אני מתכנן מוצר,
+          מתרגם אותו למערכת עובדת, מודד אותו עם נתונים, מזהה נקודות
+          כשל ומשפר אותו ב-iteration.
+        </p>
+        <p class="hero-principle">
+          I design a product, translate it into execution, evaluate it
+          with data, identify failure modes, and iterate.
+        </p>
+        <div class="hero-actions">
+          <a href="#monday" class="btn btn-primary">ראה את הקייס סטאדי</a>
+          <a href="#resume" class="btn btn-ghost">Resume</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">+10</span><span class="stat-label">שנות ניסיון במוצר</span></div>
+          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Case studies מלאים</span></div>
+          <div class="stat"><span class="stat-num">Data</span><span class="stat-label">מונחה מדידה ו-iteration</span></div>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <img src="assets/hero-portrait.png" alt="גיא קידר פורטרט" />
+        <div class="portrait-glow" aria-hidden="true"></div>
+      </div>
+    </div>
+    <a href="#journey" class="scroll-hint" aria-label="גלול למטה">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- The one journey -->
+  <section class="section journey" id="journey">
+    <div class="container">
+      <p class="section-eyebrow reveal">The through-line</p>
+      <h2 class="section-title reveal">מסלול אחד, מתכנון עד מוצר טוב יותר</h2>
+      <ol class="flow reveal">
+        <li><span class="flow-num">01</span>Planning</li>
+        <li><span class="flow-num">02</span>Execution</li>
+        <li><span class="flow-num">03</span>Measurement</li>
+        <li><span class="flow-num">04</span>AI-assisted Analysis</li>
+        <li><span class="flow-num">05</span>Iteration</li>
+        <li class="flow-end"><span class="flow-num">→</span>Better Product</li>
+      </ol>
+      <p class="journey-note reveal">
+        שני הקייסים למטה הם אותו סיפור: לוקחים תהליך, מתכננים אותו,
+        בונים אותו במערכת אמיתית, מודדים, ומשפרים בעזרת AI.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 01 · monday.com case study ============ -->
+  <section class="section case case-monday" id="monday">
+    <div class="container">
+      <p class="case-index reveal">01 · monday.com</p>
+      <h2 class="section-title reveal">From Product Planning to a Working System</h2>
+      <p class="case-sub reveal">
+        לא רק שימוש בכלי. Product thinking: איך רעיון ותכנון הופכים
+        למערכת עבודה אמיתית, מדידה ומשתפרת.
+      </p>
+
+      <!-- Business problem -->
+      <div class="case-block reveal">
+        <span class="case-tag">The problem</span>
+        <h3>הבעיה העסקית</h3>
+        <p>
+          בארגון ממשלתי צוותי הפיתוח עבדו ללא שיטת עבודה אחידה: לא היה
+          מקור אמת אחד למשימות, קושי לעקוב אחרי sprints, וחוסר שקיפות מול
+          ההנהלה לגבי מה מתוכנן מול מה שבוצע בפועל. נדרשה שיטת Agile
+          ומערכת ניהול עבודה שתייצר סדר, מדידה ושליטה.
+        </p>
+      </div>
+
+      <!-- Planning -->
+      <div class="case-split reveal">
+        <div class="case-media">
+          <div class="shot-placeholder" data-label="Planning · צילום מסך של התכנון המקורי">
+            <span>PLANNING</span>
+            <small>כאן ייכנס צילום מסך של התכנון: המבנה, השלבים, הסטטוסים והלוגיקה</small>
+          </div>
+        </div>
+        <div class="case-text">
+          <span class="case-step">Planning</span>
+          <h3>מה תכננתי</h3>
+          <p>
+            לפני הבנייה הגדרתי את מבנה התהליך: שלבי העבודה, הסטטוסים,
+            הישויות והמידע הנדרש כדי לייצר תהליך עבודה ברור ומדיד.
+          </p>
+          <ul class="case-list">
+            <li>מיפוי התהליך העסקי לישויות (Boards, Groups, Items)</li>
+            <li>הגדרת עמודות מפתח: אחראי, סטטוס, תאריך יעד, עדיפות, sprint</li>
+            <li>הגדרת סטטוסים שמשקפים את מצב העבודה האמיתי</li>
+            <li>הגדרת הקשרים והתלויות בין המשימות</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Execution -->
+      <div class="case-split reverse reveal">
+        <div class="case-media">
+          <div class="shot-placeholder" data-label="Execution · צילום מסך של הלוח בפועל">
+            <span>EXECUTION</span>
+            <small>כאן ייכנס צילום מסך של לוח monday.com כפי שנבנה בפועל</small>
+          </div>
+        </div>
+        <div class="case-text">
+          <span class="case-step">Execution</span>
+          <h3>מה בניתי בפועל</h3>
+          <p>
+            התכנון תורגם ללוח עבודה פעיל ב-monday.com, עם מבנה שמאפשר
+            לצוות לנהל משימות, מעקבים, פגישות ותהליכים באופן שוטף.
+          </p>
+          <ul class="case-list">
+            <li>לוח חי שמשמש את הצוות יום-יום</li>
+            <li>Dashboards ו-KPIs להנהלה</li>
+            <li>אוטומציות להתראות, מעברי סטטוס והקצאות</li>
+            <li>תצוגות Sprint Planning ו-Timeline</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Planning vs Reality -->
+      <div class="case-block reveal">
+        <span class="case-tag">The important part</span>
+        <h3>Planning vs. Reality</h3>
+        <p class="case-sub-inline">ההפרדה הזו חזקה בהרבה מלהראות רק צילום מסך של לוח.</p>
+        <div class="compare">
+          <div class="compare-col plan">
+            <h4>Planning</h4>
+            <ul>
+              <li>מה רצינו לבנות</li>
+              <li>תהליך מתוכנן</li>
+              <li>הנחות</li>
+              <li>מבנה ראשוני</li>
+            </ul>
+          </div>
+          <div class="compare-vs" aria-hidden="true">vs</div>
+          <div class="compare-col reality">
+            <h4>Execution</h4>
+            <ul>
+              <li>מה נבנה בפועל</li>
+              <li>תהליך עובד</li>
+              <li>נתונים מהשימוש</li>
+              <li>Iteration ושיפורים</li>
+            </ul>
+          </div>
+        </div>
+        <blockquote class="case-quote">
+          The real value isn't the plan. It's the ability to turn the plan
+          into a working system, measure it, and improve it.
+        </blockquote>
+      </div>
+
+      <!-- Day to day + measure + iterate -->
+      <div class="mini-grid">
+        <div class="mini-card reveal">
+          <span class="mini-num">01</span>
+          <h4>שימוש יום-יומי</h4>
+          <p>הצוות מנהל דרך הלוח משימות, פגישות ומעקבים. מקור אמת אחד לכולם.</p>
+        </div>
+        <div class="mini-card reveal">
+          <span class="mini-num">02</span>
+          <h4>מה נמדד</h4>
+          <p>עומס משימות, עמידה בזמנים, מהירות sprint והתקדמות מול תכנון, דרך dashboards ו-KPIs.</p>
+        </div>
+        <div class="mini-card reveal">
+          <span class="mini-num">03</span>
+          <h4>מה למדתי</h4>
+          <p>איפה התכנון פגש את המציאות: אילו סטטוסים היו מיותרים, איפה נוצרו צווארי בקבוק.</p>
+        </div>
+        <div class="mini-card reveal">
+          <span class="mini-num">04</span>
+          <h4>מה שיניתי</h4>
+          <p>עדכון מבנה הלוח, פישוט סטטוסים והוספת אוטומציות בעקבות הנתונים מהשימוש בפועל.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AI × Product Execution bridge ============ -->
+  <section class="section bridge" id="bridge">
+    <div class="container">
+      <p class="section-eyebrow reveal">AI × Product Execution</p>
+      <h2 class="section-title reveal">AI לא כקישוט. כחלק מתהליך העבודה.</h2>
+      <ol class="flow flow-ai reveal">
+        <li>Plan</li>
+        <li>Build</li>
+        <li>Use</li>
+        <li>Analyze</li>
+        <li class="flow-ai-node">AI</li>
+        <li class="flow-end">Improve</li>
+      </ol>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card-index">🧠</span>
+          <h3>AI-assisted planning</h3>
+          <p>ניתוח דרישות, זיהוי פערים והצעת מבנה לתהליך.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-index">⚙️</span>
+          <h3>AI-assisted execution</h3>
+          <p>סיוע בהפיכת התכנון למשימות ותהליכי עבודה.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-index">📊</span>
+          <h3>AI-assisted analysis</h3>
+          <p>ניתוח המידע שנאסף וזיהוי בעיות ודפוסים.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-index">🔄</span>
+          <h3>Continuous improvement</h3>
+          <p>שימוש בתובנות כדי לשפר את המערכת שוב ושוב.</p>
+        </article>
+      </div>
+      <p class="bridge-note reveal">
+        The same product mindset extends to AI agents. במקום רק לבנות
+        Agent, אני בוחן איך הוא מתנהג בפועל, מודד את איכות התשובות, מזהה
+        failure modes ומשפר את המערכת דרך evaluation ו-iteration.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 02 · AI / ECA Agent ============ -->
+  <section class="section case case-ai" id="ai">
+    <div class="container">
+      <p class="case-index reveal">02 · AI Agent</p>
+      <h2 class="section-title reveal">Designing, Evaluating &amp; Improving an AI Agent</h2>
+      <p class="case-sub reveal">
+        ECA Agent, מערכת SaaS פנימית מבוססת AI ברשות האכיפה והגבייה.
+        לא "הובלתי פיצ'ר AI", אלא בעלות על האופן שבו ה-Agent חושב,
+        ממוקם ומתנהג.
+      </p>
+
+      <ol class="flow flow-agent reveal">
+        <li>Positioning</li>
+        <li>Requirements</li>
+        <li>Knowledge Build</li>
+        <li>Evaluation</li>
+        <li class="flow-end">Iteration</li>
+      </ol>
+
+      <!-- Positioning -->
+      <div class="case-block reveal">
+        <span class="case-tag">Positioning</span>
+        <h3>קודם החלטה מוצרית: מה ה-Agent צריך לעשות, ומה לא</h3>
+        <p>
+          מיפיתי את נוף כלי ה-AI בארגון והגדרתי היכן ל-ECA Agent יש
+          ערך שאף כלי אחר לא נותן. במקום לשכפל יכולות קיימות, מיקמתי
+          אותו על מה שרק הוא יכול לעשות: מידע פנים-ארגוני רגיש שאסור
+          שייצא מהארגון.
+        </p>
+        <div class="pos-grid">
+          <div class="pos">
+            <span class="pos-head">כלים חיצוניים</span>
+            <p>OpenAI / Claude, למשימות כלליות כמו סיכומים. לא למידע רגיש.</p>
+          </div>
+          <div class="pos">
+            <span class="pos-head">כלי חקיקה ופסיקה</span>
+            <p>כלי מקצועי ייעודי לחקיקה ופסיקה כללית, שכבר בשימוש הארגון.</p>
+          </div>
+          <div class="pos accent">
+            <span class="pos-head">ECA Agent</span>
+            <p>מידע פנים-ארגוני רגיש, שליפת נהלים וניהול ידע פנימי, בסביבה מאובטחת.</p>
+          </div>
+        </div>
+        <blockquote class="case-quote">
+          Data security first. אם מידע לא יכול לצאת מהארגון, שם ה-Agent
+          מספק את הערך שאף כלי חיצוני לא יכול.
+        </blockquote>
+      </div>
+
+      <!-- Requirements discovery -->
+      <div class="case-block reveal">
+        <span class="case-tag">Requirements</span>
+        <h3>גזרתי use cases אמיתיים מהשטח</h3>
+        <p>
+          במקום להניח מה נדרש, אספתי דרישות מהמשתמשים בפועל כדי לזהות
+          את הערך המוסף הספציפי, ותרגמתי אותן לגרסה מבוססת מאגר ידע
+          שנשלחה לבדיקה מול המשתמשים.
+        </p>
+        <div class="mini-grid">
+          <div class="mini-card">
+            <span class="mini-num">01</span>
+            <h4>ניסוח וטיוטות</h4>
+            <p>סיוע בניסוח מסמכים על בסיס ידע פנים-ארגוני.</p>
+          </div>
+          <div class="mini-card">
+            <span class="mini-num">02</span>
+            <h4>תיקים מרובי מסמכים</h4>
+            <p>צורך אמיתי לסכם תיק שלם, לא רק מסמך-שניים. פתרון ביניים מיידי לצד בירור עומק.</p>
+          </div>
+          <div class="mini-card">
+            <span class="mini-num">03</span>
+            <h4>שליפת נהלים</h4>
+            <p>שליפה מונחית של נהלים והנחיות ממערכת ניהול הידע.</p>
+          </div>
+          <div class="mini-card">
+            <span class="mini-num">04</span>
+            <h4>Knowledge Build</h4>
+            <p>Pipeline להוצאת מידע ממוקד ממאגר הידע ליצירת יישום ECA Agent ייעודי.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evaluation metrics + dramatic improvement -->
+      <div class="case-block reveal">
+        <span class="case-tag">Evaluation → Result</span>
+        <h3>מדדתי, זיהיתי כשלים, שיפרתי, וקפצתי ל-100%</h3>
+
+        <!-- The headline jump -->
+        <div class="jump">
+          <div class="jump-side from">
+            <span class="jump-stage">Baseline</span>
+            <span class="jump-num" data-count="66.25" data-decimals="2" data-suffix="%">66.25%</span>
+            <span class="jump-label">ציון משוקלל בהתחלה</span>
+          </div>
+          <div class="jump-arrow" aria-hidden="true">
+            <span class="jump-arrow-glyph">→</span>
+            <span class="jump-delta">+33.75%</span>
+          </div>
+          <div class="jump-side to">
+            <span class="jump-stage">After iteration</span>
+            <span class="jump-num" data-count="100" data-decimals="0" data-suffix="%">100%</span>
+            <span class="jump-label">5/5 ב-batch המעודכן (יעד 80%)</span>
+          </div>
+        </div>
+
+        <p class="jump-note">
+          לאחר זיהוי ה-failure modes עדכנתי את קריטריוני ההערכה, והם
+          נשמרו כחלק מהתצורה כדי לנהל כל evaluation עתידי. התוצאה: מעל
+          יעד ה-80% בפער ניכר.
+        </p>
+
+        <!-- Baseline breakdown for context -->
+        <div class="breakdown-head">Baseline breakdown (47→40 שאלות שנבדקו)</div>
+        <div class="breakdown">
+          <div class="bar">
+            <span class="bar-fill full" style="--w:50%"></span>
+            <span class="bar-label">20 תשובות מלאות</span>
+          </div>
+          <div class="bar">
+            <span class="bar-fill partial" style="--w:32.5%"></span>
+            <span class="bar-label">13 חלקיות</span>
+          </div>
+          <div class="bar">
+            <span class="bar-fill wrong" style="--w:17.5%"></span>
+            <span class="bar-label">7 שגויות</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Failure modes -->
+      <div class="case-block reveal">
+        <span class="case-tag">Failure modes</span>
+        <h3>מה שזיהיתי כבעיות</h3>
+        <div class="fail-grid">
+          <div class="fail"><span>⚠️</span>תשובות לא ממוקדות או לא רלוונטיות</div>
+          <div class="fail"><span>🔍</span>ה-Agent לא תמיד מצא מידע שכבר קיים ב-Knowledge Base</div>
+          <div class="fail"><span>🔀</span>חוסר עקביות בין תשובות</div>
+          <div class="fail"><span>👻</span>Hallucination, כולל מידע מומצא (למשל "מס הכנסה")</div>
+          <div class="fail"><span>🐢</span>זמני תגובה איטיים וחוסר יציבות</div>
+        </div>
+      </div>
+
+      <!-- Before / After improvements -->
+      <div class="case-block reveal">
+        <span class="case-tag">Iteration</span>
+        <h3>מה שיניתי בעקבות ה-Evaluation</h3>
+        <div class="ba-grid">
+          <div class="ba before">
+            <h4>Before</h4>
+            <ul>
+              <li>כמה תשובות אפשריות במקום מענה אחד</li>
+              <li>אין זיהוי כוונה מובנה</li>
+              <li>שאלה עמומה = ניחוש</li>
+              <li>Hallucination ללא בקרה</li>
+            </ul>
+          </div>
+          <div class="ba after">
+            <h4>After</h4>
+            <ul>
+              <li>Intent Detection לזיהוי כוונת המשתמש</li>
+              <li>מענה חד וברור במקום כמה אפשרויות</li>
+              <li>Clarification כשהשאלה עמומה</li>
+              <li>שיפור Knowledge Retrieval וצמצום Hallucination</li>
+            </ul>
+          </div>
+        </div>
+        <blockquote class="case-quote">Let it iterate &amp; evaluate itself.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AI-native principle banner ============ -->
+  <section class="principle-band">
+    <div class="container">
+      <p class="pb-eyebrow reveal">The core insight</p>
+      <h2 class="pb-title reveal">AI-native, not AI-adjacent.</h2>
+      <p class="pb-text reveal">
+        לא "הובלתי צוות ששחרר פיצ'ר AI". עיצבתי את אופן החשיבה של
+        ה-Agent, כתבתי prompt evaluations, וניהלתי את מחזור חיי ה-LLM
+        מקצה לקצה.
+      </p>
+      <p class="pb-quote reveal">
+        The real question isn't seniority. It's whether this person can
+        own how the agent thinks.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 03 · Projects ============ -->
+  <section class="section work" id="work">
+    <div class="container">
+      <p class="section-eyebrow reveal">03 · Projects</p>
+      <h2 class="section-title reveal">עוד עבודות שהובלתי</h2>
+      <div class="work-grid">
+        <a href="https://spicygames.com" target="_blank" rel="noopener" class="work-item reveal">
+          <div class="work-meta"><span>Gaming Platform</span></div>
+          <h3>SpicyGames</h3>
+          <p>פלטפורמת משחקים חינמיים עם עיצוב סוחף ונגישות מלאה.</p>
+          <span class="work-arrow">↗</span>
+        </a>
+        <a href="https://likekass.com" target="_blank" rel="noopener" class="work-item reveal">
+          <div class="work-meta"><span>Social App</span></div>
+          <h3>Like Kass</h3>
+          <p>אפליקציה חברתית לשיתוף וידאו בסגנון TikTok, +3K משתמשים ב-5 חודשים.</p>
+          <span class="work-arrow">↗</span>
+        </a>
+        <a href="https://botly.co.il" target="_blank" rel="noopener" class="work-item reveal">
+          <div class="work-meta"><span>AI Automation</span></div>
+          <h3>Botly</h3>
+          <p>פלטפורמת צמיחה חכמה לאינסטגרם המבוססת אוטומציה ו-AI.</p>
+          <span class="work-arrow">↗</span>
+        </a>
+        <a href="#resume" class="work-item reveal">
+          <div class="work-meta"><span>Amusement Park</span></div>
+          <h3>Magic Kass</h3>
+          <p>מערכת כרטוס ומשחק לפארק השעשועים המקורה הגדול בישראל, +52% מכירות אונליין.</p>
+          <span class="work-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · About / Experience ============ -->
+  <section class="section experience" id="about">
+    <div class="container">
+      <p class="section-eyebrow reveal">04 · About</p>
+      <h2 class="section-title reveal">ניסיון תעסוקתי</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <span class="timeline-year">2008–2015</span>
+          <div class="timeline-body">
+            <h3>Random Logic / 888</h3>
+            <p class="timeline-role">Front-End Developer &amp; UI Designer</p>
+            <p>עיצוב ממשקי UX/UI לפלטפורמות משחקים, בניית קומפוננטות רספונסיביות והעלאת שיעורי המרה ב-33%.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <span class="timeline-year">2015–2020</span>
+          <div class="timeline-body">
+            <h3>ExperTeam · כפר סבא</h3>
+            <p class="timeline-role">Product Content Manager</p>
+            <p>ניהול תוכן מוצר ל-50+ לקוחות, פיתוח Roadmap, פתרונות מולטימדיה ובניית אתרי WordPress חכמים.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <span class="timeline-year">2020–2025</span>
+          <div class="timeline-body">
+            <h3>Magic Kass</h3>
+            <p class="timeline-role">Product &amp; Media Manager</p>
+            <p>ניהול מחזור חיי מוצר מלא, שדרוג מערכות כרטוס (+52% מכירות אונליין), פיתוח אפליקציית תוכן ושילוב AR/VR וגיימיפיקציה.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <span class="timeline-year">2025 · היום</span>
+          <div class="timeline-body">
+            <h3>רשות האכיפה והגבייה · ירושלים</h3>
+            <p class="timeline-role">Product Manager</p>
+            <p>הובלת תהליכי דיגיטציה וניהול מחזור חיי מוצר, הטמעת Salesforce CRM, בניית מערכת ניהול עבודה ב-monday.com עם dashboards ו-KPIs, והובלת ECA Agent, מערכת SaaS פנימית מבוססת AI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · Resume CTA ============ -->
+  <section class="section resume" id="resume">
+    <div class="container resume-inner">
+      <div class="reveal">
+        <p class="section-eyebrow">05 · Resume</p>
+        <h2 class="section-title">בואו נעבוד יחד</h2>
+        <p class="resume-lead">
+          אני מתכנן מוצר, מתרגם אותו לביצוע, מודד עם נתונים, מזהה נקודות
+          כשל ומשפר ב-iteration. אשמח להראות איך זה נראה על מוצר אמיתי שלכם.
+        </p>
+        <div class="resume-actions">
+          <a href="assets/guy-kedar-cv.pdf" target="_blank" rel="noopener" class="btn btn-primary" id="resumeBtn">צפייה בקורות החיים</a>
+          <a href="assets/guy-kedar-cv.pdf" download="Guy_Kedar_Product_Manager_CV.pdf" class="btn btn-ghost">הורדה כ-PDF</a>
+          <a href="mailto:info@guykedar.com" class="btn btn-ghost">info@guykedar.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">GK<span class="logo-dot">.</span></span>
+      <p>© <span id="year"></span> גיא קידר · Product Manager · AI × Product × Execution</p>
+      <a href="#hero" class="footer-top">חזרה למעלה ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
