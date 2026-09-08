@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/guykedar/guy_kedar_portfolio/
+    - /bin/mkdir -p $DEPLOYPATH/assets
+    - /bin/cp -f index.html $DEPLOYPATH
+    - /bin/cp -f styles.css $DEPLOYPATH
+    - /bin/cp -f script.js $DEPLOYPATH
+    - /bin/cp -f assets/hero-portrait.png $DEPLOYPATH/assets
+    - /bin/cp -f assets/guy-kedar-cv.pdf $DEPLOYPATH/assets
