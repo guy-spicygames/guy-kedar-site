@@ -1,0 +1,33 @@
+name: Deploy to server via FTP
+
+# מפעיל את ההעלאה בכל דחיפה ל-main, או ידנית מכפתור ב-GitHub
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
+          # חשבון ה-FTP כבר מוגדר עם Directory=public_html,
+          # לכן היעד הוא השורש שלו (דף הבית של guykedar.com)
+          server-dir: ./
+          # קבצים שלא יועלו לשרת
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.vscode/**
+            .cpanel.yml
