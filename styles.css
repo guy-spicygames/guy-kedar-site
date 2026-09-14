@@ -172,6 +172,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 2px;
   margin-bottom: 22px;
 }
+.hero-ai { color: #15803d; }
 .hero-sub {
   font-size: clamp(15px, 1.8vw, 19px);
   color: var(--text-dim);
