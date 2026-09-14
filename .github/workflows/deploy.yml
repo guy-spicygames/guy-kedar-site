@@ -21,9 +21,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           protocol: ftp
-          # חשבון ה-FTP כבר מוגדר עם Directory=public_html,
-          # לכן היעד הוא השורש שלו (דף הבית של guykedar.com)
-          server-dir: ./
+          # משתמשים בחשבון cPanel הראשי (guykedar), שה-home שלו הוא /home/guykedar/.
+          # לכן היעד הוא public_html שבתוכו (דף הבית של guykedar.com).
+          server-dir: ./public_html/
           # קבצים שלא יועלו לשרת
           exclude: |
             **/.git*
