@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/others/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/others/favicon.svg" />
   <meta name="theme-color" content="#0a0a0b" />
   <title>גיא קידר · Product Manager | AI × Product × Execution</title>
   <meta name="description" content="גיא קידר, מנהל מוצר. מתכנן מוצר, מתרגם אותו לביצוע, מודד עם נתונים, מזהה failure modes ומשפר ב-iteration. Case studies: monday.com ו-ECA Agent (AI)." />
@@ -41,7 +41,7 @@
       <div class="hero-text">
         <p class="hero-name">גיא קידר · Guy Kedar</p>
         <p class="hero-eyebrow">Product Manager</p>
-        <h1 class="hero-title"><span class="hero-ai">AI</span> × Product<br />× Execution</h1>
+        <h1 class="hero-title">AI × Product<br />× Execution</h1>
         <p class="hero-sub">
           אני לא רק "מתעניין ב-AI ומכיר את monday". אני מתכנן מוצר,
           מתרגם אותו למערכת עובדת, מודד אותו עם נתונים, מזהה נקודות
@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="hero-portrait">
-        <img src="assets/hero-portrait.png" alt="גיא קידר פורטרט" />
+        <img src="assets/images/hero-portrait.png" alt="גיא קידר פורטרט" />
         <div class="portrait-glow" aria-hidden="true"></div>
       </div>
     </div>
@@ -114,79 +114,62 @@
       </div>
 
       <!-- Planning -->
-      <div class="case-split reveal">
-        <div class="case-media">
-          <div class="shot-placeholder" data-label="Planning · צילום מסך של התכנון המקורי">
-            <span>PLANNING</span>
-            <small>כאן ייכנס צילום מסך של התכנון: המבנה, השלבים, הסטטוסים והלוגיקה</small>
-          </div>
-        </div>
-        <div class="case-text">
-          <span class="case-step">Planning</span>
-          <h3>מה תכננתי</h3>
-          <p>
-            לפני הבנייה הגדרתי את מבנה התהליך: שלבי העבודה, הסטטוסים,
-            הישויות והמידע הנדרש כדי לייצר תהליך עבודה ברור ומדיד.
-          </p>
-          <ul class="case-list">
-            <li>מיפוי התהליך העסקי לישויות (Boards, Groups, Items)</li>
-            <li>הגדרת עמודות מפתח: אחראי, סטטוס, תאריך יעד, עדיפות, sprint</li>
-            <li>הגדרת סטטוסים שמשקפים את מצב העבודה האמיתי</li>
-            <li>הגדרת הקשרים והתלויות בין המשימות</li>
-          </ul>
-        </div>
+      <div class="case-block reveal">
+        <span class="case-step">Planning</span>
+        <h3>מה תכננתי</h3>
+        <p>
+          לפני הבנייה הגדרתי את מבנה התהליך: שלבי העבודה, הסטטוסים,
+          הישויות והמידע הנדרש כדי לייצר תהליך עבודה ברור ומדיד.
+        </p>
+        <ul class="case-list">
+          <li>מיפוי התהליך העסקי לישויות (Boards, Groups, Items)</li>
+          <li>הגדרת עמודות מפתח: אחראי, סטטוס, תאריך יעד, עדיפות, sprint</li>
+          <li>הגדרת סטטוסים שמשקפים את מצב העבודה האמיתי</li>
+          <li>הגדרת הקשרים והתלויות בין המשימות</li>
+        </ul>
       </div>
 
       <!-- Execution -->
-      <div class="case-split reverse reveal">
-        <div class="case-media">
-          <div class="shot-placeholder" data-label="Execution · צילום מסך של הלוח בפועל">
-            <span>EXECUTION</span>
-            <small>כאן ייכנס צילום מסך של לוח monday.com כפי שנבנה בפועל</small>
+      <div class="case-block reveal">
+        <span class="case-step">Execution</span>
+        <h3>מה בניתי בפועל</h3>
+        <p>
+          התכנון תורגם ללוח עבודה פעיל ב-monday.com, עם מבנה שמאפשר
+          לצוות לנהל משימות, מעקבים, פגישות ותהליכים באופן שוטף.
+        </p>
+        <ul class="case-list">
+          <li>לוח חי שמשמש את הצוות יום-יום</li>
+          <li>Dashboards ו-KPIs להנהלה</li>
+          <li>אוטומציות להתראות, מעברי סטטוס והקצאות</li>
+          <li>תצוגות Sprint Planning ו-Timeline</li>
+        </ul>
+      </div>
+
+      <!-- Video walkthrough (6 parts) -->
+      <div class="case-block reveal">
+        <span class="case-tag">Walkthrough</span>
+        <h3>סרטון הסבר: תכנון מול ביצוע</h3>
+        <p class="case-sub-inline">טוטוריאל ב-6 חלקים. עברו בין החלקים לפי הסדר.</p>
+
+        <div class="tut" id="mondayTut">
+          <div class="tut-tabs" role="tablist">
+            <button class="tut-tab is-active" data-src="assets/monday-clips/monday-part-1.mp4">01 · תכנון מול ביצוע</button>
+            <button class="tut-tab" data-src="" disabled>02 · בקרוב</button>
+            <button class="tut-tab" data-src="" disabled>03 · בקרוב</button>
+            <button class="tut-tab" data-src="" disabled>04 · בקרוב</button>
+            <button class="tut-tab" data-src="" disabled>05 · בקרוב</button>
+            <button class="tut-tab" data-src="" disabled>06 · בקרוב</button>
           </div>
-        </div>
-        <div class="case-text">
-          <span class="case-step">Execution</span>
-          <h3>מה בניתי בפועל</h3>
-          <p>
-            התכנון תורגם ללוח עבודה פעיל ב-monday.com, עם מבנה שמאפשר
-            לצוות לנהל משימות, מעקבים, פגישות ותהליכים באופן שוטף.
-          </p>
-          <ul class="case-list">
-            <li>לוח חי שמשמש את הצוות יום-יום</li>
-            <li>Dashboards ו-KPIs להנהלה</li>
-            <li>אוטומציות להתראות, מעברי סטטוס והקצאות</li>
-            <li>תצוגות Sprint Planning ו-Timeline</li>
-          </ul>
+          <div class="tut-stage">
+            <video id="tutVideo" controls preload="metadata" playsinline
+                   src="assets/monday-clips/monday-part-1.mp4"></video>
+          </div>
+          <p class="tut-caption" id="tutCaption">חלק 1 מתוך 6 · תכנון מול ביצוע</p>
         </div>
       </div>
 
-      <!-- Planning vs Reality -->
+      <!-- Key takeaway -->
       <div class="case-block reveal">
-        <span class="case-tag">The important part</span>
-        <h3>Planning vs. Reality</h3>
-        <p class="case-sub-inline">ההפרדה הזו חזקה בהרבה מלהראות רק צילום מסך של לוח.</p>
-        <div class="compare">
-          <div class="compare-col plan">
-            <h4>Planning</h4>
-            <ul>
-              <li>מה רצינו לבנות</li>
-              <li>תהליך מתוכנן</li>
-              <li>הנחות</li>
-              <li>מבנה ראשוני</li>
-            </ul>
-          </div>
-          <div class="compare-vs" aria-hidden="true">vs</div>
-          <div class="compare-col reality">
-            <h4>Execution</h4>
-            <ul>
-              <li>מה נבנה בפועל</li>
-              <li>תהליך עובד</li>
-              <li>נתונים מהשימוש</li>
-              <li>Iteration ושיפורים</li>
-            </ul>
-          </div>
-        </div>
         <blockquote class="case-quote">
           The real value isn't the plan. It's the ability to turn the plan
           into a working system, measure it, and improve it.
@@ -545,8 +528,8 @@
           כשל ומשפר ב-iteration. אשמח להראות איך זה נראה על מוצר אמיתי שלכם.
         </p>
         <div class="resume-actions">
-          <a href="assets/guy-kedar-cv.pdf" target="_blank" rel="noopener" class="btn btn-primary" id="resumeBtn">צפייה בקורות החיים</a>
-          <a href="assets/guy-kedar-cv.pdf" download="Guy_Kedar_Product_Manager_CV.pdf" class="btn btn-ghost">הורדה כ-PDF</a>
+          <a href="assets/others/guy-kedar-cv.pdf" target="_blank" rel="noopener" class="btn btn-primary" id="resumeBtn">צפייה בקורות החיים</a>
+          <a href="assets/others/guy-kedar-cv.pdf" download="Guy_Kedar_Product_Manager_CV.pdf" class="btn btn-ghost">הורדה כ-PDF</a>
           <a href="mailto:info@guykedar.com" class="btn btn-ghost">info@guykedar.com</a>
         </div>
       </div>

@@ -31,3 +31,5 @@ jobs:
             **/.github/**
             **/.vscode/**
             .cpanel.yml
+            **/*.wav
+            **/*.docx

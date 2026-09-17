@@ -4,6 +4,52 @@
 (function () {
   "use strict";
 
+  /* Video tutorial (6 parts) tab switching */
+  var tut = document.getElementById("mondayTut");
+  if (tut) {
+    var tutVideo = document.getElementById("tutVideo");
+    var tutCaption = document.getElementById("tutCaption");
+    var tabs = tut.querySelectorAll(".tut-tab");
+
+    /* On mobile: when entering fullscreen, lock orientation to landscape */
+    function tryLockLandscape() {
+      var so = window.screen && window.screen.orientation;
+      if (so && so.lock) {
+        so.lock("landscape").catch(function () {});
+      }
+    }
+    function onFsChange() {
+      var fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+      if (fsEl === tutVideo) {
+        tryLockLandscape();
+      } else {
+        var so = window.screen && window.screen.orientation;
+        if (so && so.unlock) { try { so.unlock(); } catch (e) {} }
+      }
+    }
+    document.addEventListener("fullscreenchange", onFsChange);
+    document.addEventListener("webkitfullscreenchange", onFsChange);
+    // iOS Safari uses a video-level fullscreen event
+    tutVideo.addEventListener("webkitbeginfullscreen", tryLockLandscape);
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () {
+        if (tab.disabled) return;
+        var src = tab.getAttribute("data-src");
+        if (!src) return;
+        tabs.forEach(function (t) { t.classList.remove("is-active"); });
+        tab.classList.add("is-active");
+        tutVideo.pause();
+        tutVideo.setAttribute("src", src);
+        tutVideo.load();
+        if (tutCaption) {
+          tutCaption.textContent = "חלק " + (i + 1) + " מתוך 6 · " +
+            tab.textContent.replace(/^\d+\s*·\s*/, "").trim();
+        }
+      });
+    });
+  }
+
   /* Sticky header state */
   var header = document.getElementById("header");
   function onScroll() {
