@@ -254,6 +254,7 @@ a { color: inherit; text-decoration: none; }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 44px var(--accent-glow); }
 .btn-ghost { border-color: var(--line); color: var(--text); }
 .btn-ghost:hover { border-color: var(--text); background: rgba(255,255,255,0.04); }
+
 .btn-block { width: 100%; }
 
 /* ---------- Sections ---------- */
@@ -336,9 +337,25 @@ a { color: inherit; text-decoration: none; }
 .card p { color: var(--text-dim); font-size: 15px; }
 
 /* ---------- Work ---------- */
+.work-lead {
+  max-width: 640px;
+  margin-bottom: 32px;
+  color: var(--text-dim);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.work-lead::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 18px;
+  border-radius: 2px;
+}
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
 }
 .work-item {
@@ -350,7 +367,7 @@ a { color: inherit; text-decoration: none; }
   min-height: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   overflow: hidden;
   transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
 }
@@ -374,7 +391,23 @@ a { color: inherit; text-decoration: none; }
   padding: 5px 12px;
   border-radius: 100px;
 }
-.work-item h3 { font-size: 28px; margin-bottom: 8px; position: relative; z-index: 1; }
+.work-item h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  padding-top: 26px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.work-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease);
+}
 .work-item p { color: var(--text-dim); font-size: 15px; position: relative; z-index: 1; }
 .work-arrow {
   position: absolute;
@@ -384,6 +417,97 @@ a { color: inherit; text-decoration: none; }
   transition: color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 .work-item:hover .work-arrow { color: var(--accent); transform: translate(-4px, -4px); }
+
+/* Spicy Toon — themed accent that hints at the studio's hot, colorful vibe */
+.work-item--spicy::after {
+  background: radial-gradient(circle at 80% 0%, rgba(255,138,0,0.28), transparent 60%),
+              radial-gradient(circle at 20% 100%, rgba(255,45,85,0.22), transparent 55%);
+  opacity: 0.45;
+}
+.work-item--spicy:hover::after { opacity: 1; }
+.work-item--spicy:hover { border-color: rgba(255,110,0,0.55); }
+.work-item--spicy .work-meta span {
+  color: #ff8a00;
+  border-color: rgba(255,138,0,0.45);
+}
+.work-item--spicy:hover .work-arrow { color: #ff8a00; }
+.work-item--spicy:hover .work-icon { transform: rotate(-8deg) scale(1.12); }
+
+/* Magic Kass — playful amusement-park lights (colorful, fun, energetic) */
+.work-item--park::after {
+  background: radial-gradient(circle at 82% 0%, rgba(0,200,255,0.24), transparent 58%),
+              radial-gradient(circle at 15% 105%, rgba(255,0,153,0.22), transparent 55%),
+              radial-gradient(circle at 50% 120%, rgba(255,214,0,0.18), transparent 60%);
+  opacity: 0.5;
+}
+.work-item--park:hover::after { opacity: 1; }
+.work-item--park:hover { border-color: rgba(0,200,255,0.5); }
+.work-item--park .work-meta span {
+  color: #22c3ff;
+  border-color: rgba(34,195,255,0.45);
+}
+.work-item--park:hover .work-arrow { color: #22c3ff; }
+.work-item--park:hover .work-icon { transform: rotate(8deg) scale(1.12); }
+
+/* Botly — futuristic AI / automation accent (violet + cyan glow) */
+.work-item--ai::after {
+  background: radial-gradient(circle at 80% 0%, rgba(138,92,255,0.26), transparent 58%),
+              radial-gradient(circle at 18% 105%, rgba(0,224,209,0.20), transparent 55%);
+  opacity: 0.5;
+}
+.work-item--ai:hover::after { opacity: 1; }
+.work-item--ai:hover { border-color: rgba(138,92,255,0.55); }
+.work-item--ai .work-meta span {
+  color: #9b7bff;
+  border-color: rgba(155,123,255,0.45);
+}
+.work-item--ai:hover .work-arrow { color: #9b7bff; }
+.work-item--ai:hover .work-icon { transform: scale(1.15); }
+
+/* SpicyGames — arcade gaming energy (neon green + magenta) */
+.work-item--games::after {
+  background: radial-gradient(circle at 80% 0%, rgba(0,230,118,0.24), transparent 58%),
+              radial-gradient(circle at 16% 105%, rgba(255,0,128,0.20), transparent 55%);
+  opacity: 0.5;
+}
+.work-item--games:hover::after { opacity: 1; }
+.work-item--games:hover { border-color: rgba(0,230,118,0.5); }
+.work-item--games .work-meta span {
+  color: #1fe08a;
+  border-color: rgba(31,224,138,0.45);
+}
+.work-item--games:hover .work-arrow { color: #1fe08a; }
+.work-item--games:hover .work-icon { transform: rotate(-6deg) scale(1.14); }
+
+/* Rinat Masud — soft, warm therapeutic tone (muted violet + sage green) */
+.work-item--therapy::after {
+  background: radial-gradient(circle at 80% 0%, rgba(150,120,220,0.20), transparent 58%),
+              radial-gradient(circle at 18% 105%, rgba(120,170,120,0.18), transparent 55%);
+  opacity: 0.5;
+}
+.work-item--therapy:hover::after { opacity: 1; }
+.work-item--therapy:hover { border-color: rgba(150,120,220,0.5); }
+.work-item--therapy .work-meta span {
+  color: #b39ae0;
+  border-color: rgba(150,120,220,0.4);
+}
+.work-item--therapy:hover .work-arrow { color: #b39ae0; }
+.work-item--therapy:hover .work-icon { transform: rotate(-6deg) scale(1.12); }
+
+/* Synthetic Brains — electric deep-tech / neural-silicon glow (cyan + violet) */
+.work-item--neural::after {
+  background: radial-gradient(circle at 80% 0%, rgba(0,229,255,0.24), transparent 58%),
+              radial-gradient(circle at 15% 105%, rgba(124,92,255,0.20), transparent 55%);
+  opacity: 0.5;
+}
+.work-item--neural:hover::after { opacity: 1; }
+.work-item--neural:hover { border-color: rgba(0,229,255,0.5); }
+.work-item--neural .work-meta span {
+  color: #35d6ff;
+  border-color: rgba(53,214,255,0.45);
+}
+.work-item--neural:hover .work-arrow { color: #35d6ff; }
+.work-item--neural:hover .work-icon { transform: scale(1.15); }
 
 /* ---------- Experience timeline ---------- */
 .experience { background: var(--bg-alt); }
@@ -1116,5 +1240,48 @@ a { color: inherit; text-decoration: none; }
   #mondayTut .tut-stage video {
     aspect-ratio: auto;
     max-height: 60vh;
+  }
+}
+
+/* ---------- Floating WhatsApp button ---------- */
+.whatsapp-float {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #0a0a0b;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  animation: wa-float 3s ease-in-out infinite;
+}
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.55);
+}
+.whatsapp-float svg { display: block; }
+
+@keyframes wa-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.whatsapp-float:hover { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float { animation: none; }
+}
+
+@media (max-width: 640px) {
+  .whatsapp-float {
+    left: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
   }
 }
